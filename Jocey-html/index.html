@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="icon" href="assets/images/favicon.png" sizes="35x35" type="image/png">
+    <title>LAPACHO - Talabartería</title>
+
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="assets/css/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/color3.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/cart-styles.css">
+
+</head>
+<body>
+
+    <main>
+        <div id="preloader">            
+            <div class="preloader-inner">
+                <i class="preloader-icon thm-clr fas fas fa-medal"></i>
+            </div>
+        </div><!-- Page Loader -->
+        <header class="style3 w-100">
+            <div class="topbar bg-color11 w-100">
+                <div class="container">
+                    <div class="topbar-inner d-flex flex-wrap align-items-center justify-content-between w-100">
+                        <div class="header-contact position-relative">
+                            <a href="tel:+542617500634" title="Call Us">
+                              <i class="fas fa-phone-alt"></i> +54 (261) 240-5323
+                            </a>
+                        </div>
+                        <div class="topbar-right d-inline-flex align-items-center flex-wrap">
+                            <div class="social-links d-inline-flex">
+                                <a href="https://www.facebook.com/" title="Facebook" target="_blank">
+                                  <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/" title="Linkedin" target="_blank">
+                                  <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                            <button class="cart-button" onclick="openCartPage()">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span id="cart-count" class="cart-count-badge">0</span>
+                            </button>                            
+                            <a class="search-btn d-inline-block position-relative" href="javascript:void(0);" title="">
+                              <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="logo-menu-wrap position-relative w-100">
+                <div class="container">
+                    <div class="logo-menu-inner d-flex flex-wrap align-items-center justify-content-between position-relative w-100">
+                        <div class="logo v2 z1 bg-color10 position-absolute text-center"><h1 class="mb-0"><a class="d-block" href="index.html" title="INICIO"><img class="img-fluid" src="assets/images/logo4.png" alt="Logo" srcset="assets/images/logo4.png"></a></h1></div><!-- Logo -->
+                        <nav class="d-flex flex-wrap align-items-center justify-content-between w-100">
+                            <div class="header-left">
+                                <ul class="mb-0 list-unstyled d-inline-flex">
+                                    <li><a href="index.html" title="">INICIO</a></li>
+
+                                    <li class="menu-item-has-children"><a href="javascript:void(0);" title="">PRODUCTOS</a>
+                                        <ul class="mb-0 list-unstyled">
+                                            <li><a href="products criollo.html" title="">CRIOLLO </a></li>
+                                            <li><a href="products indumentaria.html" title="">INDUMENTARIA</a></li>
+                                            <li><a href="products polo.html" title="">POLO</a></li>
+                                            <li><a href="products regaleria.html" title="">REGALERIA</a></li>
+                                            <li><a href="products salto.html" title="">SALTO</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="index.html#about" title="">SERVICIOS</a></li>
+                                    
+                                    <li><a href="index.html#contacto" title="">SOBRE NOSOTROS</a></li>
+
+                                    <li><a href="index.html#footer" title="">CONTACTO</a></li>
+                                      
+                                        
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </nav><!-- Navigation -->
+                    </div>
+                </div>
+            </div><!-- Logo & Menu Wrap -->
+            </header><!-- Header -->
+            <div class="header-search d-flex flex-wrap align-items-center position-fixed w-100">
+                <span class="search-close-btn position-absolute"><i class="fas fa-times"></i></span>
+                <form class="w-100 position-relative">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                    <input type="text" placeholder="Search">
+                </form>
+            </div><!-- Header Search -->
+            <div class="sticky-menu">
+                <div class="container">
+                    <div class="sticky-menu-inner d-flex flex-wrap align-items-center justify-content-between w-100">
+                        <div class="logo"><h1 class="mb-0"><a class="d-block" href="index.html" title="Home"><img class="img-fluid" src="assets/images/logo6.png" alt="Logo" srcset="assets/images/logo6.png"></a></h1></div><!-- Logo -->
+                        <nav class="d-flex flex-wrap align-items-center justify-content-between">
+                            <div class="header-left">
+                                <ul class="mb-0 list-unstyled d-inline-flex">
+                                    <li><a href="index.html" title="">INICIO</a></li>
+
+                                    <li class="menu-item-has-children"><a href="javascript:void(0);" title="">PRODUCTOS</a>
+                                        <ul class="mb-0 list-unstyled">
+                                            <li><a href="products criollo.html" title="">CRIOLLO </a></li>
+                                            <li><a href="products indumentaria.html" title="">INDUMENTARIA</a></li>
+                                            <li><a href="products polo.html" title="">POLO</a></li>
+                                            <li><a href="products regaleria.html" title="">REGALERIA</a></li>
+                                            <li><a href="products salto.html" title="">SALTO</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="#servicios" title="">SERVICIOS</a></li>
+                                    
+                                    <li><a href="#about" title="">SOBRE NOSOTROS</a></li>
+
+                                    <li><a href="#contacto" title="">CONTACTO</a></li>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div><!-- Sticky Menu -->
+            <div class="rspn-hdr">
+                <div class="lg-mn">
+                    <div class="logo"><h1 class="mb-0 d-block"><a href="index.html" title="Home"><img src="assets/images/logo6.png" alt="Logo"></a></h1></div>
+                    <div class="rspn-cnt">
+                        <span><i class="thm-clr far fa-envelope"></i><a href="mailto:info@youremailid.com" title="">info@youremailid.com</a></span>
+                        <span><i class="thm-clr fas fa-phone-alt"></i>+54 (261) 240-5323</span>
+                    </div>
+                    <span class="rspn-mnu-btn"><i class="fa fa-list-ul"></i></span>
+                </div>
+                <div class="rsnp-mnu">
+                    <span class="rspn-mnu-cls"><i class="fa fa-times"></i></span>
+                    <ul class="mb-0 list-unstyled w-100">
+                        <ul class="mb-0 list-unstyled d-inline-flex">
+                            <li><a href="index.html" title="">INICIO</a></li>
+
+                            <li class="menu-item-has-children"><a href="javascript:void(0);" title="">PRODUCTOS</a>
+                                <ul class="mb-0 list-unstyled">
+                                    <li><a href="products criollo.html" title="">CRIOLLO </a></li>
+                                    <li><a href="products indumentaria.html" title="">INDUMENTARIA</a></li>
+                                    <li><a href="products polo.html" title="">POLO</a></li>
+                                    <li><a href="products regaleria.html" title="">REGALERIA</a></li>
+                                    <li><a href="products salto.html" title="">SALTO</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#servicios" title="">SERVICIOS</a></li>
+                            
+                            <li><a href="#about" title="">SOBRE NOSOTROS</a></li>
+
+                            <li><a href="#contacto" title="">CONTACTO</a></li>
+                            </li>
+                        </ul>
+                </div>
+                    </ul>
+                </div><!-- Responsive Menu -->
+            </div><!-- Responsive Header -->
+            
+			<!-- Sn Main Slider -->
+			<section class="sn-main-slider">
+				<div class="sn-main-slider-carousel owl-carousel owl-theme">
+					
+					<div class="slide">
+						<div class="container">
+							<div class="row clearfix">
+								<!-- Content Column -->
+								<div class="content-column col-lg-6 cl-md-12 col-sm-12">
+									<div class="inner-column">
+										<div class="title">Respetamos el pasado, creamos para el futuro</div>
+										<h1>Talabartería Moderna con Raíces Tradicionales</h1>
+										<div class="btns-box">
+											<a class="thm-btn thm-bg brd-rd5 d-inline-block position-relative overflow-hidden" href="#contacto" title="">CONTACTANOS</a>
+										</div>
+									</div>
+								</div>
+								
+								<!-- Image Column -->
+								<div class="image-column col-lg-6 cl-md-12 col-sm-12">
+									<div class="inner-column">
+										<div class="circle-layer">
+											<span class="circle-one"></span>
+											<span class="circle-two"></span>
+										</div>
+										<div class="image">
+											<img src="assets/images/video-image.webp" alt="" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="slide">
+						<div class="container">
+							<div class="row clearfix">
+								<!-- Content Column -->
+								<div class="content-column col-lg-6 cl-md-12 col-sm-12">
+									<div class="inner-column">
+										<div class="title">Elaboramos productos artesanales que cuentan su propia historia.</div>
+										<h1>Creaciones Únicas, Hechas para Ti</h1>
+										<div class="btns-box">
+											<a class="thm-btn thm-bg brd-rd5 d-inline-block position-relative overflow-hidden" href="#contacto" title="">CONTACTANOS</a>
+										</div>
+									</div>
+								</div>
+								
+								<!-- Image Column -->
+								<div class="image-column col-lg-6 cl-md-12 col-sm-12">
+									<div class="inner-column">
+										<div class="circle-layer">
+											<span class="circle-one"></span>
+											<span class="circle-two"></span>
+										</div>
+										<div class="image">
+											<img src="assets/images/video-images.jpg" alt="" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</section>
+			<!-- End Main Slider Section -->
+			
+			<section class="sn-featured-section">
+				<div class="container">
+					<div class="inner-container">
+						<div class="clearfix">
+						
+							<!-- Sn Feature Block -->
+							<div class="sn-feature-block col-lg-4 col-md-6 col-sm-12">
+								<div class="inner-box">
+									<div class="content">
+										<span class="icon fas fa-child"></span>
+										<h4>Décadas de Tradición</h4>
+										<div class="text">Desde nuestros inicios, trabajamos para mantener viva la esencia de la talabartería</div>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Sn Feature Block -->
+							<div class="sn-feature-block active col-lg-4 col-md-6 col-sm-12">
+								<div class="inner-box">
+									<div class="content">
+										<span class="icon fas fa-medal"></span>
+										<h4>Creado para Ti</h4>
+										<div class="text">Diseños únicos, creados para quienes aman el campo y las tradiciones</div>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Sn Feature Block -->
+							<div class="sn-feature-block col-lg-4 col-md-6 col-sm-12">
+								<div class="inner-box">
+									<div class="content">
+										<span class="icon fas fa-horse-head"></span>
+										<h4>Calidad Superior</h4>
+										<div class="text">Cada pieza se elabora con cuero seleccionado para garantizar belleza y durabilidad.</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</section>
+			
+
+            <section id="servicios">
+                <div class="w-100 pt-90 white-layer opc95 pb-90 position-relative">
+                    <div class="fixed-bg" style="background-image: url(assets/images/parallax-bg2.jpg);"></div>
+                    <div class="container">
+                        <div class="sec-title sec-title-with-btns d-flex flex-wrap align-items-center justify-content-between w-100">
+                            <div class="sec-title-inner">
+                                <span class="position-relative thm-clr sub-shap v2 thm-shp d-block">Creando piezas únicas desde 2007</span>
+                                <h2 class="mb-0">Nuestros Servicios</h2>
+                                <p class="mb-0">Comprometidos con la excelencia artesanal, ofrecemos soluciones diseñadas para cuidar y realzar cada detalle de tus piezas de cuero.</p>
+                            </div>
+                            <div class="sec-title-btns d-inline-flex flex-wrap align-items-center">
+                            </div>
+                        </div><!-- Sec Title -->
+                        <div class="serv-wrap2 res-row position-relative w-100">
+                            <div class="row mrg30">
+                                <div class="col-md-6 col-sm-6 col-lg-4">
+                                    <div class="serv-box2 v2 position-relative w-100">
+                                        <div class="serv-img2 brd-rd10 position-relative overflow-hidden w-100">
+                                            <img class="img-fluid w-100" src="assets/images/resources/serv-img2-1.jpg" alt="Services Image 1">
+                                        </div>
+                                        <div class="serv-info2 w-100 position-absolute"><h3 class="mb-0"><a href="#servicios" title="">Diseño y Fabricación Artesanal</a></h3></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-lg-4">
+                                    <div class="serv-box2 v2 position-relative w-100">
+                                        <div class="serv-img2 brd-rd10 position-relative overflow-hidden w-100">
+                                            <img class="img-fluid w-100" src="assets/images/resources/serv-img2-2.webp" alt="Services Image 2">
+                                        </div>
+                                        <div class="serv-info2 w-100 position-absolute"><h3 class="mb-0"><a href="#servicios" title="">Restauración y Reparación</a></h3></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-lg-4">
+                                    <div class="serv-box2 v2 position-relative w-100">
+                                        <div class="serv-img2 brd-rd10 position-relative overflow-hidden w-100">
+                                            <img class="img-fluid w-100" src="assets/images/resources/serv-img2-3.jpg" alt="Services Image 3">
+                                        </div>
+                                        <div class="serv-info2 w-100 position-absolute"><h3 class="mb-0"><a href="#servicios" title="">Diseños a Medida</a></h3></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- Services Wrap 2 -->
+                    </div>
+                </div>
+            </section>
+            <section id="about">
+                <div class="w-100 white-layer opc8 pb-100 position-relative">
+                    <div class="container">
+                        <div class="about-wrap3 position-relative w-100">
+                            <div class="row mrg30">
+                                <div class="col-md-12 col-sm-12 col-lg-5 order-lg-1">
+                                    <div class="about-img position-relative w-100">
+                                        <img class="img-fluid w-100" src="assets/images/resources/about-img.jpg" alt="About Image">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-lg-6">
+                                    <div class="about-desc v2 w-100">
+                                        <h2 class="mb-0">Sobre Nosotros</h2>
+                                        <strong>Fundados en 2007, en Talabartería Lapacho mantenemos viva la tradición del cuero artesanal.</strong>
+                                        <p class="mb-0">En Talabartería Lapacho, la tradición y la pasión por el arte del cuero nos definen. Creamos piezas únicas y artesanales que combinan calidad, diseño y durabilidad. Inspirados en las raíces del campo y las tradiciones ecuestres, trabajamos con técnicas transmitidas de generación en generación para garantizar productos auténticos y personalizados. Nuestro compromiso es ofrecer artículos que no solo destaquen por su belleza, sino que también cuenten una historia en cada detalle</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- About Wrap 3 -->
+                    </div>
+                </div>
+            </section>
+
+            
+            <section id="contacto">
+                <div class="w-100 pt-100 thm-layer opc6 pb-0 position-relative">
+                    <div class="fixed-bg back-blend-lighten thm-bg" style="background-image: url(assets/images/parallax-bg7.png);"></div>
+                    <div class="container">
+                        <div class="sec-title3 text-center w-100">
+                            <div class="sec-title3-inner d-inline-block">
+                                <h3 class="mb-0">CONTACTANOS</h3>
+                                <p class="mb-0">Si tienes consultas, necesitas más información o deseas personalizar alguno de nuestros productos, no dudes en contactarnos. En Talabartería Lapacho estamos comprometidos a brindarte atención personalizada y soluciones a medida.</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-wrap text-center position-relative w-100">
+                            <div class="row mrg30">
+                                <div class="col-md-4 col-sm-6 col-lg-4">
+                                    <div class="contact-info-box position-relative w-100">
+                                        <i class="fas fa-envelope-open brd-rd10 d-inline-block scndry-clr"></i>
+                                        <span class="d-block"><a href="mailto:info@nauthemes.com" title="">info@talabarterialapacho.com</a></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-lg-4">
+                                    <div class="contact-info-box position-relative w-100">
+                                        <i class="fas fa-home brd-rd10 d-inline-block scndry-clr"></i>
+                                        <p class="mb-0">Av. Colón 738, M5500 Mendoza <br>🕘 Lunes a Viernes: <br> 9:00 - 13:00 | 16:30 - 20:30 <br>🕙 Sábados: 10:00 - 14:00<br>🚪 Domingos: Cerrado</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-lg-4">
+                                    <div class="contact-info-box position-relative w-100">
+                                        <i class="fas fa-phone-alt brd-rd10 d-inline-block scndry-clr"></i>
+                                        <span class="d-block"><a href="tel:+542617500634" title="Call Us">+54 (261) 240-5323</a></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- Contact Info Wrap -->
+                    </div>
+                </div>
+            </section>
+            
+            <footer class="site-footer" id="footer">    
+                <div class="w-100 style3 pt-0 dark-layer2 opc87 position-relative">
+                    <div class="footer-top">
+                    <div class="fixed-bg" style="background-image: url(assets/images/parallax-bg7.png);"></div>
+                    <div class="container">
+                        <div class="footer-grid">
+                            <!-- Logo y descripción -->
+                            <div class="footer-brand">
+                              <div class="footer-logo">
+                                <h2>LAPACHO</h2>
+                                <span>Talabartería</span>
+                              </div>
+                              <p class="brand-description">
+                                Artesanía en cuero de la más alta calidad. Tradición y excelencia desde 1990.
+                              </p>
+                              <div class="social-links">
+                                <a href="#" class="social-link" aria-label="Síguenos en Facebook">
+                                  <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Síguenos en Twitter">
+                                  <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Síguenos en Instagram">
+                                  <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-link" aria-label="Síguenos en LinkedIn">
+                                  <i class="fab fa-linkedin-in"></i>
+                                </a>
+                              </div>
+                            </div>
+                    
+                            <!-- Enlaces de navegación -->
+                            <div class="footer-nav">
+                              <h3>Navega</h3>
+                              <ul>
+                                <li><a href="/sobre-nosotros">Sobre Nosotros</a></li>
+                                <li><a href="/productos">Productos</a></li>
+                                <li><a href="/servicios">Nuestros Servicios</a></li>
+                                <li><a href="/contacto">Contactanos</a></li>
+                              </ul>
+                            </div>
+                    
+                            <!-- Servicios -->
+                            <div class="footer-services">
+                              <h3>Servicios</h3>
+                              <ul>
+                                <li><a href="/envios">Envíos</a></li>
+                                <li><a href="/devoluciones">Devoluciones</a></li>
+                                <li><a href="/preguntas-frecuentes">FAQ</a></li>
+                                <li><a href="/terminos">Términos y Condiciones</a></li>
+                              </ul>
+                            </div>
+                    
+                            <!-- Contacto -->
+                            <div class="footer-contact">
+                              <h3>Contacto</h3>
+                              <ul>
+                                <li>
+                                  <i class="fas fa-phone"></i>
+                                  <a href="tel:+542617500634">+54 (261) 240-5323</a>
+                                </li>
+                                <li>
+                                  <i class="fas fa-envelope"></i>
+                                  <a href="mailto:info@talabarterialapacho.com">info@talabarterialapacho.com</a>
+                                </li>
+                                <li>
+                                  <i class="fas fa-map-marker-alt"></i>
+                                  <address>Av. Colón 738, M5500 Mendoza</address>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="footer-bottom" style="padding:1.5rem 0;background-color:rgba(0,0,0,0.1);width: 100%;">
+                        <div class="container">
+                          <p>&copy; 2024 LAPACHO Talabartería. Todos los derechos reservados.</p>
+                          <div class="footer-legal">
+                            <a href="/privacidad">Política de Privacidad</a>
+                            <a href="/cookies">Política de Cookies</a>
+                          </div>
+                        </div>
+                      </div>
+                    </footer>
+</main><!-- Main Wrapper -->
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/counterup.min.js"></script>
+        <script src="assets/js/jquery.fancybox.min.js"></script>
+        <script src="assets/js/perfect-scrollbar.min.js"></script>
+        <script src="assets/js/slick.min.js"></script>
+		<script src="assets/js/owl.js"></script>
+        <script src="assets/js/custom-scripts.js"></script>
+
+    <style>
+        #scrollTopButton {
+       position: fixed;
+       bottom: 20px;             /* Distancia desde abajo */
+       right: 20px;              /* Distancia desde la derecha */
+       width: 50px;
+       height: 50px;
+       background-color: #d3b382;/* Color de fondo (marrón claro) */
+       color: white;
+       font-size: 24px;
+       border: none;
+       border-radius: 50%;       /* Botón circular */
+       cursor: pointer;
+       opacity: 0;               /* Oculto inicialmente */
+       pointer-events: none;     /* Sin interacción mientras esté oculto */
+       transition: opacity 0.3s ease;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       z-index: 100000000;
+     }
+     
+     #scrollTopButton.show {
+       opacity: 1;
+       pointer-events: auto;     /* Se vuelve clickeable */
+     }
+     
+       </style>
+     </head>
+     <body>
+       <p style="padding: 20px;"></p>
+     
+       <!-- Botón de "volver arriba" (sin inline onclick) -->
+       <button id="scrollTopButton" onclick="scrollToTop()">
+         <i class="fas fa-chevron-up"></i>
+     </button>
+     
+       <script>
+      document.addEventListener("DOMContentLoaded", function() {
+       const scrollTopButton = document.getElementById("scrollTopButton");
+     
+       // Verifica si el scroll del documento cambia
+       window.addEventListener("scroll", function() {
+         // Obtenemos la posición actual de scroll
+         const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+         // Mostramos el botón si el scroll es mayor a 20px
+         if (scrollPos > 20) {
+           scrollTopButton.classList.add("show");
+         } else {
+           scrollTopButton.classList.remove("show");
+         }
+       });
+     
+       // Al hacer clic, se hace scroll suave hacia arriba
+       scrollTopButton.addEventListener("click", function() {
+         window.scrollTo({ top: 0, behavior: "smooth" });
+       });
+     });
+     
+       </script>
+     
+       <!-- Contenedor para notificaciones flotantes -->
+     <!-- Mensaje de "Procesando" (oculto por defecto) -->
+     <div id="processing-overlay" style="
+       display: none;
+       position: fixed;
+       z-index: 9999;
+       top: 0; left: 0;
+       width: 100%; height: 100%;
+       background-color: rgba(0,0,0,0.5);
+       color: #fff;
+       text-align: center;
+       padding-top: 200px;
+       font-size: 1.5rem;">
+       Procesando
+     </div>
+     
+     <!-- Contenedor para notificaciones flotantes -->
+     <div id="cart-message" style="
+     
+       display: none;
+       position: fixed;
+       bottom: 20px;
+       right: 20px;
+       z-index: 10000000000000000000000;
+       background-color: #432818;
+       color: #fff;
+       padding: 12px 20px;
+       border-radius: 4px;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+       font-size: 1rem;
+       transition: opacity 0.3s ease;
+     ">
+       <!-- El texto del mensaje irá aquí -->
+     </div>
+     
+     
+     </body>
+     </html>

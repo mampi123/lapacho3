@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="icon" href="assets/images/favicon.png" sizes="35x35" type="image/png">
+    <title>LAPACHO - Talabartería</title>
+
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="assets/css/perfect-scrollbar.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/color3.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/cart-styles.css">
+
+</head>
+<body>
+
+    <main>
+
+        </div><!-- Page Loader -->
+        <header class="style3 w-100">
+            <div class="topbar bg-color11 w-100">
+                <div class="container">
+                    <div class="topbar-inner d-flex flex-wrap align-items-center justify-content-between w-100">
+                        <div class="header-contact position-relative">
+                            <a href="tel:+542617500634" title="Call Us">
+                              <i class="fas fa-phone-alt"></i> +54 (261) 240-5323
+                            </a>
+                        </div>
+                        <div class="topbar-right d-inline-flex align-items-center flex-wrap">
+                            <div class="social-links d-inline-flex">
+                                <a href="https://www.facebook.com/" title="Facebook" target="_blank">
+                                  <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/" title="Linkedin" target="_blank">
+                                  <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                            <button class="cart-button" onclick="openCartPage()">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span id="cart-count" class="cart-count-badge">0</span>
+                            </button>                            
+                            <a class="search-btn d-inline-block position-relative" href="javascript:void(0);" title="">
+                              <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="logo-menu-wrap position-relative w-100">
+                <div class="container">
+                    <div class="logo-menu-inner d-flex flex-wrap align-items-center justify-content-between position-relative w-100">
+                        <div class="logo v2 z1 bg-color10 position-absolute text-center"><h1 class="mb-0"><a class="d-block" href="index.html" title="INICIO"><img class="img-fluid" src="assets/images/logo4.png" alt="Logo" srcset="assets/images/logo4.png"></a></h1></div><!-- Logo -->
+                        <nav class="d-flex flex-wrap align-items-center justify-content-between w-100">
+                            <div class="header-left">
+                                <ul class="mb-0 list-unstyled d-inline-flex">
+                                    <li><a href="index.html" title="">INICIO</a></li>
+
+                                    <li class="menu-item-has-children"><a href="javascript:void(0);" title="">PRODUCTOS</a>
+                                        <ul class="mb-0 list-unstyled">
+                                            <li><a href="products criollo.html" title="">CRIOLLO </a></li>
+                                            <li><a href="products indumentaria.html" title="">INDUMENTARIA</a></li>
+                                            <li><a href="products polo.html" title="">POLO</a></li>
+                                            <li><a href="products regaleria.html" title="">REGALERIA</a></li>
+                                            <li><a href="products salto.html" title="">SALTO</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li><a href="index.html#about" title="">SERVICIOS</a></li>
+                                    
+                                    <li><a href="index.html#contacto" title="">SOBRE NOSOTROS</a></li>
+
+                                    <li><a href="index.html#footer" title="">CONTACTO</a></li>
+                                      
+                                        
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </nav><!-- Navigation -->
+                    </div>
+                </div>
+            </div><!-- Logo & Menu Wrap -->
+  </header>
+  <!-- END HEADER -->
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- Sección principal para "Indumentaria" -->
+    <section class="cart-section">
+      <div class="container">
+        <div class="cart-header">
+          <h1>Productos de Criollo</h1>
+          <div class="cart-actions">
+            <a href="index.html" class="continue-shopping-btn">
+              <i class="fas fa-arrow-left"></i>
+              Volver al inicio
+            </a>
+          </div>
+        </div>
+
+        <!-- Controles de orden y búsqueda -->
+        <div class="product-controls d-flex flex-wrap justify-content-between align-items-center mb-4">
+          <div class="sort-filter d-flex align-items-center mb-3 mb-md-0">
+            <label for="sort" class="mr-2 mb-0 font-weight-bold">Ordenar por:</label>
+            <select id="sort">
+              <option value="precioAsc">Precio Ascendente</option>
+              <option value="precioDesc">Precio Descendente</option>
+              <option value="ventasAsc">Ventas Ascendente</option>
+              <option value="ventasDesc">Ventas Descendente</option>
+              <option value="nombreAsc">Nombre A-Z</option>
+              <option value="nombreDesc">Nombre Z-A</option>
+          </select>
+          </div>
+
+          <div class="search-box d-flex align-items-center">
+            <input type="text" id="search-input" placeholder="Buscar productos...">
+            <button id="search-button">Buscar</button>
+          </div>
+        </div>
+
+        <!-- Sección de productos dinámicos -->
+        <section class="products-section">
+          <!-- Estado de carga -->
+          <div class="loading-state" style="display: none;">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Cargando productos...</p>
+          </div>
+
+          <!-- Contenedor donde se inyectarán los productos -->
+          <div id="products-container" class="row"></div>
+
+          <!-- Estado vacío (cuando no hay productos) -->
+          <div class="empty-state text-center" style="display: none;">
+            <i class="fas fa-box-open" style="font-size: 3rem; color: #ccc;"></i>
+            <h3>No se encontraron productos</h3>
+            <p>
+              No hemos podido encontrar productos que coincidan con tu búsqueda.
+              Intenta con otros términos o navega por nuestras categorías.
+            </p>
+            <a href="products indumentaria.html" class="add-to-cart-btn">
+              <i class="fas fa-arrow-left"></i> Ver todos los productos
+            </a>
+          </div>
+        </section>
+      </div><!-- /container -->
+    </section>
+  </main>
+  <!-- END MAIN CONTENT -->
+
+  <!-- FOOTER FULL-WIDTH -->
+  <footer class="site-footer" id="footer" style="width: 100%; background-color: #432818; color: #fff;">
+    <!-- Footer Top -->
+    <div class="footer-top" style="padding: 4rem 0 3rem; border-bottom: 1px solid rgba(255,255,255,0.1);">
+      <!-- No .container si quieres que todo sea ancho. Si prefieres centrar contenido, usa .container -->
+      <div class="footer-grid" style="display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 3rem; max-width:1200px; margin:0 auto; padding:0 1rem;">
+        <!-- Logo y descripción -->
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin: 0;">LAPACHO</h2>
+            <span style="font-size: 1rem; letter-spacing: 2px;">Talabartería</span>
+          </div>
+          <p class="brand-description" style="margin-top:1rem; color: rgba(255,255,255,0.8); font-size:0.95rem;">
+            Artesanía en cuero de la más alta calidad. Tradición y excelencia desde 1990.
+          </p>
+          <div class="social-links" style="display:flex; gap:1rem; margin-top:1rem;">
+            <a href="#" class="social-link" aria-label="Síguenos en Facebook" style="background-color: rgba(255,255,255,0.1); width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff;">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Síguenos en Twitter" style="background-color: rgba(255,255,255,0.1); width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff;">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Síguenos en Instagram" style="background-color: rgba(255,255,255,0.1); width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff;">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Síguenos en LinkedIn" style="background-color: rgba(255,255,255,0.1); width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff;">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navegación -->
+        <div class="footer-nav">
+          <h3 style="color: #BB9457; font-size:1.2rem; font-weight:600; margin-bottom:1.5rem; position:relative;">Navega</h3>
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li style="margin-bottom:1rem;"><a href="/sobre-nosotros" style="color: rgba(255,255,255,0.8); text-decoration:none;">Sobre Nosotros</a></li>
+            <li style="margin-bottom:1rem;"><a href="/productos" style="color: rgba(255,255,255,0.8); text-decoration:none;">Productos</a></li>
+            <li style="margin-bottom:1rem;"><a href="/servicios" style="color: rgba(255,255,255,0.8); text-decoration:none;">Nuestros Servicios</a></li>
+            <li style="margin-bottom:1rem;"><a href="/contacto" style="color: rgba(255,255,255,0.8); text-decoration:none;">Contactanos</a></li>
+          </ul>
+        </div>
+
+        <!-- Servicios -->
+        <div class="footer-services">
+          <h3 style="color: #BB9457; font-size:1.2rem; font-weight:600; margin-bottom:1.5rem; position:relative;">Servicios</h3>
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li style="margin-bottom:1rem;"><a href="/envios" style="color: rgba(255,255,255,0.8); text-decoration:none;">Envíos</a></li>
+            <li style="margin-bottom:1rem;"><a href="/devoluciones" style="color: rgba(255,255,255,0.8); text-decoration:none;">Devoluciones</a></li>
+            <li style="margin-bottom:1rem;"><a href="/preguntas-frecuentes" style="color: rgba(255,255,255,0.8); text-decoration:none;">FAQ</a></li>
+            <li style="margin-bottom:1rem;"><a href="/terminos" style="color: rgba(255,255,255,0.8); text-decoration:none;">Términos y Condiciones</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div class="footer-contact">
+          <h3 style="color: #BB9457; font-size:1.2rem; font-weight:600; margin-bottom:1.5rem; position:relative;">Contacto</h3>
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li style="margin-bottom:1rem; display:flex; align-items:center; gap:0.5rem;">
+              <i class="fas fa-phone" style="color:#BB9457;"></i>
+              <a href="tel:+542617500634" style="color: rgba(255,255,255,0.8); text-decoration:none;">+54 (261) 7500634</a>
+            </li>
+            <li style="margin-bottom:1rem; display:flex; align-items:center; gap:0.5rem;">
+              <i class="fas fa-envelope" style="color:#BB9457;"></i>
+              <a href="mailto:info@talabarterialapacho.com" style="color: rgba(255,255,255,0.8); text-decoration:none;">info@talabarterialapacho.com</a>
+            </li>
+            <li style="margin-bottom:1rem; display:flex; align-items:center; gap:0.5rem;">
+              <i class="fas fa-map-marker-alt" style="color:#BB9457;"></i>
+              <address style="margin:0; color:rgba(255,255,255,0.8);">Av. Colón 738, M5500 Mendoza</address>
+            </li>
+          </ul>
+        </div>
+      </div><!-- /.footer-grid -->
+    </div><!-- /.footer-top -->
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom" style="padding:1.5rem 0;background-color:rgba(0,0,0,0.1);width: 100%;">
+      <div style="max-width:1200px; margin:0 auto; padding:0 1rem; display:flex; justify-content:space-between; align-items:center;">
+        <p style="margin:0; font-size:0.9rem; color:rgba(255,255,255,0.7);">
+          &copy; 2024 LAPACHO Talabartería. Todos los derechos reservados.
+        </p>
+        <div class="footer-legal" style="display:flex; gap:2rem;">
+          <a href="/privacidad" style="color: rgba(255,255,255,0.7); text-decoration:none; font-size:0.9rem;">Política de Privacidad</a>
+          <a href="/cookies" style="color: rgba(255,255,255,0.7); text-decoration:none; font-size:0.9rem;">Política de Cookies</a>
+        </div>
+      </div>
+    </div><!-- /.footer-bottom -->
+  </footer>
+  <!-- END FOOTER -->
+
+  <!-- Botón de "Volver arriba" -->
+  <button id="scrollTopButton" onclick="scrollToTop()" style="
+    position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px;
+    background-color: #d3b382; color: white; font-size: 24px; border: none;
+    border-radius: 50%; cursor: pointer; opacity: 0; pointer-events: none;
+    transition: opacity 0.3s ease; display: flex; align-items: center; 
+    justify-content: center; z-index: 100000000;">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Scripts principales -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/counterup.min.js"></script>
+  <script src="assets/js/jquery.fancybox.min.js"></script>
+  <script src="assets/js/perfect-scrollbar.min.js"></script>
+  <script src="assets/js/slick.min.js"></script>
+  <script src="assets/js/custom-scripts.js"></script>
+  <script src="assets/js/script.js"></script>
+  
+  <!-- Botón "Volver arriba" -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const scrollTopButton = document.getElementById("scrollTopButton");
+      window.addEventListener("scroll", function() {
+        const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollPos > 20) {
+          scrollTopButton.style.opacity = 1;
+          scrollTopButton.style.pointerEvents = "auto";
+        } else {
+          scrollTopButton.style.opacity = 0;
+          scrollTopButton.style.pointerEvents = "none";
+        }
+      });
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
+
+  <!-- Overlay de "Procesando" -->
+  <div id="processing-overlay" style="
+    display: none; position: fixed; z-index: 9999; top: 0; left: 0;
+    width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); color: #fff;
+    text-align: center; padding-top: 200px; font-size: 1.5rem;">
+    Procesando
+  </div>
+
+  <!-- Mensaje flotante (notificaciones) -->
+  <div id="cart-message" style="
+    display: none; position: fixed; bottom: 20px; right: 20px;
+    z-index: 999999999999; background-color: #432818; color: #fff;
+    padding: 12px 20px; border-radius: 4px; box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    font-size: 1rem; transition: opacity 0.3s ease;">
+    <!-- Texto dinámico -->
+  </div>
+
+</body>
+</html>

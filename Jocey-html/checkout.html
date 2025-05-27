@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Finalizar Compra - LAPACHO" />
+  <meta name="keywords" content="Checkout, compra, tienda, LAPACHO" />
+  <link rel="icon" href="assets/images/favicon.png" sizes="35x35" type="image/png">
+  <title>Finalizar Compra - LAPACHO</title>
+
+  <!-- Estilos principales -->
+  <link rel="stylesheet" href="assets/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/animate.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="assets/css/perfect-scrollbar.css">
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/color3.css">
+  <!-- Estilos específicos del carrito y checkout -->
+  <link rel="stylesheet" href="assets/css/checkout-styles.css">
+  <link rel="stylesheet" href="assets/css/checkoutstyle.css">
+</head>
+<body>
+
+<header class="style3 w-100">
+  <div class="topbar bg-color11 w-100">
+    <div class="container">
+      <div class="topbar-inner d-flex flex-wrap align-items-center justify-content-between w-100">
+        <div class="header-contact position-relative">
+          <a href="tel:+542617500634" title="Call Us">
+            <i class="fas fa-phone-alt"></i> +54 (261) 7500634
+          </a>
+        </div>
+        <div class="topbar-right d-inline-flex align-items-center flex-wrap">
+          <div class="social-links d-inline-flex">
+            <a href="https://www.facebook.com/" title="Facebook" target="_blank">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/" title="Linkedin" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+          <button class="cart-button" onclick="openCartPage()">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count" class="cart-count-badge">0</span>
+          </button>
+          <a class="search-btn d-inline-block position-relative" href="javascript:void(0);" title="">
+            <i class="fas fa-search"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="logo-menu-wrap position-relative w-100">
+    <div class="container">
+      <div class="logo-menu-inner d-flex flex-wrap align-items-center justify-content-between position-relative w-100">
+        <div class="logo v2 z1 bg-color10 position-absolute text-center">
+          <h1 class="mb-0">
+            <a class="d-block" href="index.html" title="INICIO">
+              <img class="img-fluid" src="assets/images/logo4.png" alt="Logo" srcset="assets/images/logo4.png">
+            </a>
+          </h1>
+        </div><!-- Logo -->
+        <nav class="d-flex flex-wrap align-items-center justify-content-between w-100">
+          <div class="header-left">
+            <ul class="mb-0 list-unstyled d-inline-flex">
+              <li><a href="index.html" title="">INICIO</a></li>
+              <li class="menu-item-has-children">
+                <a href="javascript:void(0);" title="">PRODUCTOS</a>
+                <ul class="mb-0 list-unstyled">
+                  <li><a href="products criollo.html" title="">CRIOLLO</a></li>
+                  <li><a href="products indumentaria.html" title="">INDUMENTARIA</a></li>
+                  <li><a href="products polo.html" title="">POLO</a></li>
+                  <li><a href="products regaleria.html" title="">REGALERIA</a></li>
+                  <li><a href="products salto.html" title="">SALTO</a></li>
+                </ul>
+              </li>
+              <li><a href="index.html#about" title="">SERVICIOS</a></li>
+              <li><a href="index.html#contacto" title="">SOBRE NOSOTROS</a></li>
+              <li><a href="index.html#footer" title="">CONTACTO</a></li>
+            </ul>
+          </div>
+        </nav><!-- Navigation -->
+      </div>
+    </div>
+  </div><!-- Logo & Menu Wrap -->
+</header>
+
+<main>
+  <section class="cart-section">
+    <div class="container">
+      <!-- Encabezado principal del checkout -->
+      <div class="cart-header">
+        <h1>Finalizar Compra</h1>
+        <div class="cart-actions">
+          <a href="carrito.html" class="continue-shopping-btn">
+            <i class="fas fa-arrow-left"></i>
+            Volver al carrito
+          </a>
+        </div>
+      </div>
+
+      <!-- Pasos del checkout -->
+      <div class="checkout-steps-container">
+        <div class="checkout-steps">
+          <div class="step active">
+            <span class="step-number">1</span>
+            <span class="step-text">Datos de Facturación</span>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <span class="step-text">Método de Pago</span>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <span class="step-text">Confirmación</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contenido principal del checkout: 2 columnas -->
+      <div class="checkout-content">
+        <!-- Columna izquierda: Formulario de facturación -->
+        <div class="checkout-form">
+          <!-- Cupón de descuento -->
+          <div class="coupon-section">
+            <div class="coupon-toggle">
+              <i class="fas fa-tag"></i>
+              <span>¿Tienes un cupón?</span>
+              <button class="btn-link" id="toggleCoupon">Haz clic aquí para introducir tu código</button>
+            </div>
+            <div class="coupon-form" id="couponForm" style="display: none;">
+              <input type="text" placeholder="Código de descuento">
+              <button class="btn-secondary">Aplicar</button>
+            </div>
+          </div>
+
+          <!-- Formulario principal -->
+          <form id="checkoutForm" class="billing-form">
+            <h2>Detalles de Facturación</h2>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre">Nombre <span class="required">*</span></label>
+                <input type="text" id="nombre" name="nombre" required>
+              </div>
+              <div class="form-group">
+                <label for="apellidos">Apellidos <span class="required">*</span></label>
+                <input type="text" id="apellidos" name="apellidos" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="empresa">Nombre de la empresa (opcional)</label>
+              <input type="text" id="empresa" name="empresa">
+            </div>
+
+            <div class="form-group">
+              <label for="pais">País / Región <span class="required">*</span></label>
+              <select id="pais" name="pais" required>
+                <option value="">Selecciona un país...</option>
+                <option value="AR">Argentina</option>
+                <option value="CL">Chile</option>
+                <option value="UY">Uruguay</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="direccion">Dirección <span class="required">*</span></label>
+              <input type="text" id="direccion" name="direccion" placeholder="Nombre de la calle y número" required>
+              <input type="text" id="direccion2" name="direccion2" placeholder="Apartamento, habitación, etc. (opcional)" class="mt-3">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="poblacion">Población <span class="required">*</span></label>
+                <input type="text" id="poblacion" name="poblacion" required>
+              </div>
+              <div class="form-group">
+                <label for="provincia">Provincia <span class="required">*</span></label>
+                <select id="provincia" name="provincia" required>
+                  <option value="">Selecciona una provincia...</option>
+                  <option value="MD">Mendoza</option>
+                  <option value="BA">Buenos Aires</option>
+                  <option value="CB">Córdoba</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cp">Código postal <span class="required">*</span></label>
+                <input type="text" id="cp" name="cp" required>
+              </div>
+              <div class="form-group">
+                <label for="telefono">Teléfono <span class="required">*</span></label>
+                <input type="tel" id="telefono" name="telefono" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Correo electrónico <span class="required">*</span></label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Enviar a otra dirección -->
+            <div class="shipping-toggle">
+              <label class="checkbox-container">
+                <input type="checkbox" id="enviarOtraDireccion">
+                <span class="checkmark"></span>
+                ¿Enviar a una dirección diferente?
+              </label>
+            </div>
+
+            <!-- Notas del pedido -->
+            <div class="form-group">
+              <label for="notas">Notas del pedido (opcional)</label>
+              <textarea id="notas" name="notas" placeholder="Notas sobre tu pedido, por ejemplo, notas especiales para la entrega."></textarea>
+            </div>
+          </form>
+        </div>
+
+        <!-- Columna derecha: Resumen del pedido -->
+        <div class="cart-summary p-4 bg-color4 rounded">
+          <h4 class="mb-4 text-color5">Resumen del pedido</h4>
+          <!-- Contenedor donde se inyectará la lista de productos -->
+          <div class="summary-products"></div>
+          
+          <div class="d-flex justify-content-between mb-2">
+            <span>Subtotal:</span>
+            <span id="cart-subtotal" class="font-weight-bold">$0.00</span>
+          </div>
+          
+          <div class="d-flex justify-content-between mb-2">
+            <span>Envío:</span>
+            <span id="cart-shipping" class="font-weight-bold">Gratis</span>
+          </div>
+          
+          <hr class="my-3" />
+          
+          <div class="d-flex justify-content-between mb-4">
+            <span class="h5 mb-0">Total:</span>
+            <span id="cart-total" class="h5 mb-0 text-color5">$0.00</span>
+          </div>
+          
+          <div class="payment-methods">
+            <h4>Métodos de Pago</h4>
+            <div class="payment-options">
+              <label class="payment-option">
+                <input type="radio" name="payment" value="transferencia">
+                <span class="radio-custom"></span>
+                <span>Transferencia bancaria</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment" value="mercadopago">
+                <span class="radio-custom"></span>
+                <span>MercadoPago</span>
+              </label>
+            </div>
+          </div>
+          
+          <div class="privacy-notice">
+            <p>Tus datos personales se utilizarán para procesar tu pedido, mejorar tu experiencia en esta web y otros propósitos descritos en nuestra <a href="/privacidad">política de privacidad</a>.</p>
+          </div>
+          
+          <button type="submit" class="checkout-btn" form="checkoutForm">
+            <i class="fas fa-check-circle"></i>
+            Realizar el Pedido
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" id="footer">
+  <div class="w-100 style3 pt-0 dark-layer2 opc87 position-relative">
+    <div class="footer-top">
+      <div class="fixed-bg" style="background-image: url(assets/images/parallax-bg7.png);"></div>
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Logo y descripción -->
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <h2>LAPACHO</h2>
+              <span>Talabartería</span>
+            </div>
+            <p class="brand-description">
+              Artesanía en cuero de la más alta calidad. Tradición y excelencia desde 1990.
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Síguenos en Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="Síguenos en Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="Síguenos en Instagram">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-link" aria-label="Síguenos en LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+  
+          <!-- Enlaces de navegación -->
+          <div class="footer-nav">
+            <h3>Navega</h3>
+            <ul>
+              <li><a href="/sobre-nosotros">Sobre Nosotros</a></li>
+              <li><a href="/productos">Productos</a></li>
+              <li><a href="/servicios">Nuestros Servicios</a></li>
+              <li><a href="/contacto">Contactanos</a></li>
+            </ul>
+          </div>
+  
+          <!-- Servicios -->
+          <div class="footer-services">
+            <h3>Servicios</h3>
+            <ul>
+              <li><a href="/envios">Envíos</a></li>
+              <li><a href="/devoluciones">Devoluciones</a></li>
+              <li><a href="/preguntas-frecuentes">FAQ</a></li>
+              <li><a href="/terminos">Términos y Condiciones</a></li>
+            </ul>
+          </div>
+  
+          <!-- Contacto -->
+          <div class="footer-contact">
+            <h3>Contacto</h3>
+            <ul>
+              <li>
+                <i class="fas fa-phone"></i>
+                <a href="tel:+542617500634">+54 (261) 240-5323</a>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:info@talabarterialapacho.com">info@talabarterialapacho.com</a>
+              </li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <address>Av. Colón 738, M5500 Mendoza</address>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom" style="padding:1.5rem 0;background-color:rgba(0,0,0,0.1);width: 100%;">
+      <div class="container">
+        <p>&copy; 2024 LAPACHO Talabartería. Todos los derechos reservados.</p>
+        <div class="footer-legal">
+          <a href="/privacidad">Política de Privacidad</a>
+          <a href="/cookies">Política de Cookies</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scripts principales -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/counterup.min.js"></script>
+<script src="assets/js/jquery.fancybox.min.js"></script>
+<script src="assets/js/perfect-scrollbar.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/custom-scripts.js"></script>
+
+<!-- Scripts específicos -->
+<script src="assets/js/cart-script.js"></script>
+<script src="assets/js/checkout.js"></script>
+
+<!-- Overlay para mensajes de procesamiento -->
+<div id="processing-overlay">Procesando</div>
+
+<!-- Contenedor para notificaciones flotantes -->
+<div id="cart-message"></div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Llama a la función para cargar el resumen del pedido en checkout
+    loadCheckoutCart();
+  });
+
+  function loadCheckoutCart() {
+    fetch("http://lapacho-1.local/wp-json/wc/store/cart", {
+      method: "GET",
+      credentials: "include" // Mantiene la sesión del usuario
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (!data.items || data.items.length === 0) {
+        document.querySelector(".summary-products").innerHTML = `<p>No hay productos en el carrito.</p>`;
+        document.getElementById("cart-subtotal").textContent = "$0.00";
+        document.getElementById("cart-total").textContent = "$0.00";
+        return;
+      }
+      
+      let productsHTML = "";
+      let calculatedSubtotal = 0;
+      
+      data.items.forEach(item => {
+        // Si el producto tiene imagen, sino, usa placeholder
+        let productImage = (item.images && item.images.length > 0) 
+                           ? item.images[0].src 
+                           : "assets/images/placeholder.png";
+        
+        // Determina el precio y el subtotal de la línea (suponiendo centavos)
+        let price = item.prices && item.prices.price ? item.prices.price / 100 : 0;
+        let lineSubtotal = item.totals && item.totals.line_subtotal 
+                           ? item.totals.line_subtotal / 100 
+                           : price * item.quantity;
+        calculatedSubtotal += lineSubtotal;
+        
+        productsHTML += `
+          <div class="product-item">
+            <img src="${productImage}" alt="${item.name}">
+            <div class="product-details">
+              <h5>${item.name}</h5>
+              <span class="quantity">x ${item.quantity}</span>
+            </div>
+            <span class="price">$${lineSubtotal.toFixed(2)}</span>
+          </div>
+        `;
+      });
+      
+      document.querySelector(".summary-products").innerHTML = productsHTML;
+      
+      // Asigna el subtotal y total calculados
+      document.getElementById("cart-subtotal").textContent = `$${calculatedSubtotal.toFixed(2)}`;
+      // Para este ejemplo, asumimos que el envío es gratis, por lo que el total es igual al subtotal
+      document.getElementById("cart-total").textContent = `$${calculatedSubtotal.toFixed(2)}`;
+      document.getElementById("cart-shipping").textContent = "Gratis";
+    })
+    .catch(error => {
+      console.error("Error al obtener el carrito:", error);
+      document.querySelector(".summary-products").innerHTML = `<p>Error al cargar el carrito. Inténtalo nuevamente.</p>`;
+    });
+  }
+</script>
+
+</body>
+</html>
